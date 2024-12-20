@@ -21,18 +21,16 @@ h1 {
 .container {
   width: 90%;
   margin: 0 auto;
-  overflow: hidden; 
-  display: flex; /* Use flexbox for a modern layout */
-  justify-content: space-between; /* Equal spacing between sections */
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  display: flex;
+  flex-wrap: wrap; 
 }
 
 .section {
-  flex: 0 1 32%; /* Each section takes up about one-third of the container */
+  flex: 0 1 32%; 
   border: 1px solid #000;
   background-color: #f2f2f2;
   padding: 50px 10px 10px 10px;
-  margin: 10px 0; /* Add vertical spacing between rows if wrapping happens */
+  margin-bottom: 20px;
   box-sizing: border-box;
   position: relative;
 }
@@ -48,9 +46,24 @@ h1 {
   font-weight: bold;
 }
 
-/* Fix spacing issues for smaller screens */
-@media (max-width: 991px) {
+
+@media (max-width: 991px) and (min-width: 768px) {
   .section {
-    flex: 0 1 100%; /* Full width for small screens */
+    flex: 0 1 48%;
+  }
+  .section:nth-child(3) {
+    flex: 0 1 100%; 
   }
 }
+
+
+
+@media (max-width: 767px) {
+  .section {
+    flex: 0 1 100%; 
+  }
+}
+
+
+
+
