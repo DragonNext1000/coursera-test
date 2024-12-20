@@ -49,18 +49,6 @@ html {
     font-weight: bold;
   }
   
-  /* Tablet view: 768px to 991px */
-  @media (min-width: 768px) and (max-width: 991px) {
-    .section {
-      width: 48%;
-      margin-right: 2%;
-      float: left;
-    }
-    .section:last-child {
-      width: 100%;
-      margin-top: 20px; 
-      clear: both;
-    }
   }
   
 
